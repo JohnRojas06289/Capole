@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Capoleto Café</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="Capoleto Café">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Nuestro Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html" class="active">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-buttons">
+                    <a href="order.html" class="btn btn-primary">Ordenar ahora</a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para atenderte</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visítanos</h3>
+                    <p>Av. Central 123, Ciudad</p>
+                    <p>Entre Calle Roble y Calle Pino</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Llámanos</h3>
+                    <p>+123 456 7890</p>
+                    <p>Lunes a Domingo: 7:00 - 20:00</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Escríbenos</h3>
+                    <p>info@capoleto.com</p>
+                    <p>Respondemos en menos de 24 horas</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+123 456 7890</p>
+                    <p>Atención inmediata para pedidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="section-header">
+                        <h2>Envíanos un mensaje</h2>
+                        <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="info">Información general</option>
+                                <option value="order">Consulta sobre pedidos</option>
+                                <option value="reservation">Reservaciones</option>
+                                <option value="feedback">Comentarios o sugerencias</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <div class="map-container">
+                        <!-- Replace with your actual map embed code -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952!2d-99.1!3d19.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI1JzQ4LjAiTiA5OcKwMDYnMDAuMCJX!5e0!3m2!1ses!2smx!4v1612345678901!5m2!1ses!2smx" 
+                                width="100%" height="450" style="border:0;" 
+                                allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas frecuentes</h2>
+                <p>Respuestas a las dudas más comunes</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuál es el horario de Capoleto Café?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nuestro horario es: Lunes a Viernes de 7:00 a 20:00, Sábados de 8:00 a 21:00, y Domingos de 9:00 a 18:00.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen opciones para personas con restricciones alimentarias?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con opciones vegetarianas, veganas y sin gluten. Puedes consultar las opciones disponibles en nuestro menú o preguntando directamente a nuestro personal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cómo puedo hacer un pedido para eventos?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para pedidos para eventos, te recomendamos contactarnos con al menos 48 horas de anticipación. Puedes hacerlo a través de nuestro formulario de contacto, por teléfono o WhatsApp. Trabajaremos contigo para crear un menú personalizado según tus necesidades.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Tienen servicio a domicilio?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicio a domicilio dentro de un radio de 10 km de nuestra ubicación. Puedes realizar tu pedido a través de nuestra página web o WhatsApp. El costo de envío varía según la distancia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo modificar o cancelar mi pedido?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Las modificaciones o cancelaciones deben realizarse con al menos 2 horas de anticipación para pedidos regulares y 24 horas para pedidos grandes o especiales. Contacta con nuestro equipo para gestionar cualquier cambio en tu pedido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Suscríbete a nuestro newsletter</h2>
+                    <p>Recibe noticias, promociones exclusivas y recetas directamente en tu bandeja de entrada.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/logo.jpg" alt="Capoleto Café" class="footer-logo">
+                    <p>Deliciosos pasteles artesanales y café de especialidad.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Acceso rápido</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Central 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@capoleto.com</li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horario</h4>
+                    <ul>
+                        <li>Lunes a Viernes: 7:00 - 20:00</li>
+                        <li>Sábados: 8:00 - 21:00</li>
+                        <li>Domingos: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Capoleto Café. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

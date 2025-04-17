@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar | Capoleto Café</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="Capoleto Café">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Nuestro Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-buttons">
+                    <a href="order.html" class="btn btn-primary active">Ordenar ahora</a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Order Process Section -->
+    <section class="order-process">
+        <div class="container">
+            <div class="section-header">
+                <h1>Haz tu pedido</h1>
+                <p>Selecciona tus productos favoritos y completa tu orden</p>
+            </div>
+            
+            <div class="order-steps">
+                <div class="step active" id="step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Seleccionar</div>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Detalles</div>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Confirmar</div>
+                </div>
+            </div>
+
+            <!-- Step 1: Product Selection -->
+            <div class="order-content" id="order-step-1">
+                <div class="order-categories">
+                    <button class="category-btn active" data-category="all">Todos</button>
+                    <button class="category-btn" data-category="pasteles">Pasteles</button>
+                    <button class="category-btn" data-category="panes">Panes</button>
+                    <button class="category-btn" data-category="cafe">Café</button>
+                    <button class="category-btn" data-category="desayunos">Desayunos</button>
+                </div>
+
+                <div class="order-items">
+                    <!-- Pasteles -->
+                    <div class="order-item" data-category="pasteles">
+                        <div class="item-image">
+                            <img src="assets/images/products/pastry1.jpg" alt="Croissant de Chocolate">
+                        </div>
+                        <div class="item-details">
+                            <h3>Croissant de Chocolate</h3>
+                            <p>Delicioso croissant con líneas de chocolate belga</p>
+                            <div class="item-price">$3.50</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus" data-id="croissant-chocolate">-</button>
+                            <input type="number" value="0" min="0" max="10" data-id="croissant-chocolate" data-price="3.50" data-name="Croissant de Chocolate">
+                            <button class="quantity-btn plus" data-id="croissant-chocolate">+</button>
+                        </div>
+                    </div>
+
+                    <div class="order-item" data-category="pasteles">
+                        <div class="item-image">
+                            <img src="assets/images/products/pastry2.jpg" alt="Alfajor de Dulce">
+                        </div>
+                        <div class="item-details">
+                            <h3>Alfajor de Dulce</h3>
+                            <p>Delicadas galletas rellenas de dulce de leche</p>
+                            <div class="item-price">$2.75</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus" data-id="alfajor-dulce">-</button>
+                            <input type="number" value="0" min="0" max="10" data-id="alfajor-dulce" data-price="2.75" data-name="Alfajor de Dulce">
+                            <button class="quantity-btn plus" data-id="alfajor-dulce">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add more products for each category -->
+                    <!-- Café -->
+                    <div class="order-item" data-category="cafe">
+                        <div class="item-image">
+                            <img src="assets/images/products/coffee1.jpg" alt="Espresso">
+                        </div>
+                        <div class="item-details">
+                            <h3>Espresso</h3>
+                            <p>Café concentrado con crema dorada</p>
+                            <div class="item-price">$2.50</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus" data-id="espresso">-</button>
+                            <input type="number" value="0" min="0" max="10" data-id="espresso" data-price="2.50" data-name="Espresso">
+                            <button class="quantity-btn plus" data-id="espresso">+</button>
+                        </div>
+                    </div>
+                    
+                    <!-- More products... -->
+                </div>
+
+                <div class="order-summary" id="summary-step-1">
+                    <h3>Tu pedido</h3>
+                    <div class="order-list" id="order-list">
+                        <p class="empty-cart">No has seleccionado productos aún</p>
+                    </div>
+                    <div class="order-total">
+                        <div class="total-label">Total:</div>
+                        <div class="total-amount" id="order-total">$0.00</div>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="continue-btn" disabled>Continuar</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Order Details -->
+            <div class="order-content hidden" id="order-step-2">
+                <div class="order-form">
+                    <h3>Información de entrega</h3>
+                    <form id="delivery-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Método de entrega</label>
+                            <div class="delivery-options">
+                                <label class="radio-container">
+                                    <input type="radio" name="delivery-method" value="pickup" checked>
+                                    <span class="radio-custom"></span>
+                                    Recoger en tienda
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="delivery-method" value="delivery">
+                                    <span class="radio-custom"></span>
+                                    Entrega a domicilio
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="address-fields hidden" id="address-fields">
+                            <div class="form-group">
+                                <label for="address">Dirección</label>
+                                <input type="text" id="address" name="address">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ciudad</label>
+                                <input type="text" id="city" name="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode">Código Postal</label>
+                                <input type="text" id="zipcode" name="zipcode">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Instrucciones especiales</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-summary" id="summary-step-2">
+                    <h3>Resumen de tu pedido</h3>
+                    <div class="order-list" id="order-list-step-2">
+                        <!-- Order items will be populated by JavaScript -->
+                    </div>
+                    <div class="order-total">
+                        <div class="subtotal">
+                            <div>Subtotal:</div>
+                            <div id="subtotal">$0.00</div>
+                        </div>
+                        <div class="delivery-fee hidden" id="delivery-fee-container">
+                            <div>Envío:</div>
+                            <div id="delivery-fee">$2.50</div>
+                        </div>
+                        <div class="total">
+                            <div>Total:</div>
+                            <div id="total-step-2">$0.00</div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn btn-outline" id="back-to-step-1">Volver</button>
+                        <button class="btn btn-primary" id="continue-to-step-3">Continuar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Order Confirmation -->
+            <div class="order-content hidden" id="order-step-3">
+                <div class="confirmation-details">
+                    <h3>Confirma tu pedido</h3>
+                    
+                    <div class="confirmation-section">
+                        <h4>Productos seleccionados</h4>
+                        <div class="order-list" id="order-list-step-3">
+                            <!-- Order items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="confirmation-section">
+                        <h4>Información de entrega</h4>
+                        <div class="confirmation-info" id="delivery-info">
+                            <!-- Delivery info will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="confirmation-section">
+                        <h4>Método de pago</h4>
+                        <div class="payment-options">
+                            <p>Podrás realizar el pago al recibir tu pedido.</p>
+                            <div class="payment-methods">
+                                <span><i class="fas fa-money-bill-wave"></i> Efectivo</span>
+                                <span><i class="far fa-credit-card"></i> Tarjeta</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-total" id="summary-step-3">
+                        <div class="subtotal">
+                            <div>Subtotal:</div>
+                            <div id="subtotal-step-3">$0.00</div>
+                        </div>
+                        <div class="delivery-fee hidden" id="delivery-fee-container-step-3">
+                            <div>Envío:</div>
+                            <div id="delivery-fee-step-3">$2.50</div>
+                        </div>
+                        <div class="total">
+                            <div>Total:</div>
+                            <div id="total-step-3">$0.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline" id="back-to-step-2">Volver</button>
+                        <button class="btn btn-primary" id="send-order">Enviar pedido por WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/logo.jpg" alt="Capoleto Café" class="footer-logo">
+                    <p>Deliciosos pasteles artesanales y café de especialidad.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Acceso rápido</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Central 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@capoleto.com</li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horario</h4>
+                    <ul>
+                        <li>Lunes a Viernes: 7:00 - 20:00</li>
+                        <li>Sábados: 8:00 - 21:00</li>
+                        <li>Domingos: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Capoleto Café. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/order.js"></script>
+</body>
+</html>

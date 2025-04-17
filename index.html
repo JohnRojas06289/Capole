@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capoleto Café | Sabores artesanales</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="Capoleto Café">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="menu.html">Nuestro Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-buttons">
+                    <a href="order.html" class="btn btn-primary">Ordenar ahora</a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Descubre el arte del sabor en Capoleto</h1>
+                <p>Pasteles y café de calidad artesanal elaborados con pasión e ingredientes seleccionados</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-secondary">Ver Menú</a>
+                    <a href="order.html" class="btn btn-primary">Ordenar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros favoritos</h2>
+                <p>Descubre nuestras delicias más populares</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry1.jpg" alt="Croissant de Chocolate">
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissant de Chocolate</h3>
+                        <p>Delicioso croissant con líneas de chocolate belga</p>
+                        <div class="product-price">$3.50</div>
+                        <a href="order.html?product=croissant-chocolate" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry2.jpg" alt="Alfajor de Dulce">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alfajor de Dulce</h3>
+                        <p>Delicadas galletas rellenas de dulce de leche</p>
+                        <div class="product-price">$2.75</div>
+                        <a href="order.html?product=alfajor-dulce" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry3.jpg" alt="Muffin de Frutas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Muffin de Frutas</h3>
+                        <p>Esponjoso muffin con trozos de frutas frescas</p>
+                        <div class="product-price">$3.25</div>
+                        <a href="order.html?product=muffin-frutas" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry4.jpg" alt="Croissant Clásico">
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissant Clásico</h3>
+                        <p>Crujiente por fuera, suave por dentro, mantequilla francesa</p>
+                        <div class="product-price">$2.95</div>
+                        <a href="order.html?product=croissant-clasico" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="menu.html" class="btn btn-outline">Ver menú completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestras categorías</h2>
+                <p>Explora nuestra variedad de productos</p>
+            </div>
+            <div class="categories-grid">
+                <a href="menu.html?category=pasteles" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Pasteles</h3>
+                </a>
+                <a href="menu.html?category=panes" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Panes</h3>
+                </a>
+                <a href="menu.html?category=cafe" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Café</h3>
+                </a>
+                <a href="menu.html?category=desayunos" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <h3>Desayunos</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/images/about-cafe.jpeg" alt="Capoleto Café">
+                </div>
+                <div class="about-content">
+                    <h2>Bienvenidos a Capoleto</h2>
+                    <p>En Capoleto creemos que cada bocado cuenta una historia. Desde 2015, hemos estado elaborando productos artesanales con ingredientes de la más alta calidad y técnicas tradicionales.</p>
+                    <p>Nuestro equipo de talentosos pasteleros y baristas trabajan con pasión para ofrecerte una experiencia gastronómica única y memorable.</p>
+                    <a href="about.html" class="btn btn-outline">Conoce nuestra historia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <p>Opiniones de quienes han disfrutado nuestros productos</p>
+            </div>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Los mejores croissants que he probado en la ciudad. El café es excepcional y el ambiente muy acogedor."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-name">Laura Martínez</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Increíble variedad de pasteles. Todo fresco y delicioso. El servicio es rápido y amable."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-name">Carlos Rodríguez</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Visito Capoleto todas las semanas. Sus productos siempre están frescos y el sabor es consistente. Mi favorito es el alfajor de dulce."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-name">Ana Gómez</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-feed">
+        <div class="container">
+            <div class="section-header">
+                <h2>Síguenos en Instagram</h2>
+                <p>@capoletocafe</p>
+            </div>
+            <div class="instagram-grid">
+                <a href="https://instagram.com/capoletocafe" class="instagram-item" target="_blank">
+                    <img src="assets/images/redes/insta1.png" alt="Instagram Capoleto">
+                </a>
+                <a href="https://instagram.com/capoletocafe" class="instagram-item" target="_blank">
+                    <img src="assets/images/redes/facebook.png" alt="Instagram Capoleto">
+                </a>
+                <a href="https://instagram.com/capoletocafe" class="instagram-item" target="_blank">
+                    <img src="assets/images/redes/insta1.png" alt="Instagram Capoleto">
+                </a>
+                <a href="https://instagram.com/capoletocafe" class="instagram-item" target="_blank">
+                    <img src="assets/images/redes/facebook.png" alt="Instagram Capoleto">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/logo.jpg" alt="Capoleto Café" class="footer-logo">
+                    <p>Deliciosos pasteles artesanales y café de especialidad.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Acceso rápido</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Central 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@capoleto.com</li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horario</h4>
+                    <ul>
+                        <li>Lunes a Viernes: 7:00 - 20:00</li>
+                        <li>Sábados: 8:00 - 21:00</li>
+                        <li>Domingos: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Capoleto Café. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Capoleto Café</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="Capoleto Café">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html" class="active">Nuestro Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-buttons">
+                    <a href="order.html" class="btn btn-primary">Ordenar ahora</a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1>Nuestro Menú</h1>
+                <p>Descubre nuestra variedad de productos artesanales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Categories Nav -->
+    <section class="menu-nav">
+        <div class="container">
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">Todos</button>
+                <button class="menu-tab" data-category="pasteles">Pasteles</button>
+                <button class="menu-tab" data-category="panes">Panes</button>
+                <button class="menu-tab" data-category="cafe">Café</button>
+                <button class="menu-tab" data-category="desayunos">Desayunos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Products -->
+    <section class="menu-products">
+        <div class="container">
+            <div class="products-grid" id="menu-grid">
+                <!-- Pasteles Category -->
+                <div class="product-card" data-category="pasteles">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry1.jpg" alt="Croissant de Chocolate">
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissant de Chocolate</h3>
+                        <p>Delicioso croissant con líneas de chocolate belga</p>
+                        <div class="product-price">$3.50</div>
+                        <a href="order.html?product=croissant-chocolate" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pasteles">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry2.jpg" alt="Alfajor de Dulce">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alfajor de Dulce</h3>
+                        <p>Delicadas galletas rellenas de dulce de leche</p>
+                        <div class="product-price">$2.75</div>
+                        <a href="order.html?product=alfajor-dulce" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pasteles">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry3.jpg" alt="Muffin de Frutas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Muffin de Frutas</h3>
+                        <p>Esponjoso muffin con trozos de frutas frescas</p>
+                        <div class="product-price">$3.25</div>
+                        <a href="order.html?product=muffin-frutas" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="pasteles">
+                    <div class="product-image">
+                        <img src="assets/images/products/pastry4.jpg" alt="Croissant Clásico">
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissant Clásico</h3>
+                        <p>Crujiente por fuera, suave por dentro</p>
+                        <div class="product-price">$2.95</div>
+                        <a href="order.html?product=croissant-clasico" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <!-- Panes Category -->
+                <div class="product-card" data-category="panes">
+                    <div class="product-image">
+                        <img src="assets/images/products/bread1.jpg" alt="Pan Artesanal">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pan Artesanal</h3>
+                        <p>Fermentación natural y horneado tradicional</p>
+                        <div class="product-price">$4.50</div>
+                        <a href="order.html?product=pan-artesanal" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="panes">
+                    <div class="product-image">
+                        <img src="assets/images/products/bread2.jpg" alt="Baguette Francesa">
+                    </div>
+                    <div class="product-info">
+                        <h3>Baguette Francesa</h3>
+                        <p>Corteza crujiente, miga suave y alveolada</p>
+                        <div class="product-price">$3.75</div>
+                        <a href="order.html?product=baguette-francesa" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <!-- Café Category -->
+                <div class="product-card" data-category="cafe">
+                    <div class="product-image">
+                        <img src="assets/images/products/coffee1.jpg" alt="Espresso">
+                    </div>
+                    <div class="product-info">
+                        <h3>Espresso</h3>
+                        <p>Café concentrado con crema dorada</p>
+                        <div class="product-price">$2.50</div>
+                        <a href="order.html?product=espresso" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cafe">
+                    <div class="product-image">
+                        <img src="assets/images/products/coffee2.jpg" alt="Cappuccino">
+                        <div class="product-badge">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso con leche vaporizada y espuma</p>
+                        <div class="product-price">$3.95</div>
+                        <a href="order.html?product=cappuccino" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cafe">
+                    <div class="product-image">
+                        <img src="assets/images/products/coffee3.jpg" alt="Latte">
+                    </div>
+                    <div class="product-info">
+                        <h3>Latte</h3>
+                        <p>Espresso con leche cremosa</p>
+                        <div class="product-price">$4.25</div>
+                        <a href="order.html?product=latte" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <!-- Desayunos Category -->
+                <div class="product-card" data-category="desayunos">
+                    <div class="product-image">
+                        <img src="assets/images/products/breakfast1.jpg" alt="Desayuno Completo">
+                        <div class="product-badge">Favorito</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Desayuno Completo</h3>
+                        <p>Huevos, tostadas, fruta fresca y café</p>
+                        <div class="product-price">$8.95</div>
+                        <a href="order.html?product=desayuno-completo" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="desayunos">
+                    <div class="product-image">
+                        <img src="assets/images/products/breakfast2.jpg" alt="Bowl de Yogurt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bowl de Yogurt</h3>
+                        <p>Yogurt natural con granola y frutas frescas</p>
+                        <div class="product-price">$6.50</div>
+                        <a href="order.html?product=bowl-yogurt" class="btn btn-sm">Ordenar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Banner -->
+    <section class="order-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>¿Antojo de algo especial?</h2>
+                <p>Realiza tu pedido ahora y recógelo en tienda o solicita entrega a domicilio</p>
+                <a href="order.html" class="btn btn-light">Ordenar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/logo.jpg" alt="Capoleto Café" class="footer-logo">
+                    <p>Deliciosos pasteles artesanales y café de especialidad.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Acceso rápido</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Central 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@capoleto.com</li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horario</h4>
+                    <ul>
+                        <li>Lunes a Viernes: 7:00 - 20:00</li>
+                        <li>Sábados: 8:00 - 21:00</li>
+                        <li>Domingos: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Capoleto Café. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>
