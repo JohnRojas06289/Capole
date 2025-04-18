@@ -1,6 +1,6 @@
 /**
  * Capoleto Café - Main JavaScript File
- * This file contains common functionality used across the website
+ * Updated version with product loading from JSON
  */
 
 // Wait until the DOM is fully loaded
@@ -28,7 +28,225 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#contact-form')) {
         initContactForm();
     }
+
+    // Load products from JSON if product containers exist
+    if (document.querySelector('.coffee-cards') || 
+        document.querySelector('.products-grid') || 
+        document.querySelector('.menu-products')) {
+        loadProducts();
+    }
 });
+
+/**
+ * Load products from JSON file
+ */
+function loadProducts() {
+    fetch('assets/data/products.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Process product data based on page
+            if (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+                displayFeaturedProducts(data);
+            } else if (window.location.pathname.includes('menu.html')) {
+                displayMenuProducts(data);
+            } else if (window.location.pathname.includes('order.html')) {
+                setupOrderProducts(data);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading products:', error);
+        });
+}
+
+/**
+ * Display featured products on the homepage
+ * @param {Object} data - The product data from JSON
+ */
+function displayFeaturedProducts(data) {
+    // Update coffee section
+    const coffeeContainer = document.querySelector('.coffee-cards');
+    if (coffeeContainer) {
+        // Filter coffee products
+        const coffeeProducts = data.products.filter(product => product.category === 'cafe');
+        
+        // Clear container
+        coffeeContainer.innerHTML = '';
+        
+        // Add up to 3 coffee products
+        coffeeProducts.slice(0, 3).forEach(product => {
+            const formattedPrice = product.price.toLocaleString('es-CO', {
+                style: 'currency',
+                currency: product.currency,
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            const productHtml = `
+                <div class="coffee-card">
+                    <div class="coffee-image">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="coffee-info">
+                        <div class="coffee-name">${product.name}</div>
+                        <span class="coffee-price">${formattedPrice}</span>
+                        <p class="coffee-description">${product.description}</p>
+                        <div class="coffee-action">
+                            <a href="order.html?product=${product.id}" class="btn btn-primary btn-sm btn-rounded">Delivery</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            coffeeContainer.innerHTML += productHtml;
+        });
+    }
+    
+    // Update featured products if they exist
+    const featuredContainer = document.querySelector('.products-grid');
+    if (featuredContainer) {
+        // Filter bestseller products
+        const featuredProducts = data.products.filter(product => product.bestseller);
+        
+        // Clear container
+        featuredContainer.innerHTML = '';
+        
+        // Add featured products
+        featuredProducts.slice(0, 4).forEach(product => {
+            const formattedPrice = product.price.toLocaleString('es-CO', {
+                style: 'currency',
+                currency: product.currency,
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            const productHtml = `
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        ${product.bestseller ? '<div class="product-badge">Bestseller</div>' : ''}
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-price">
+                            ${formattedPrice}
+                        </div>
+                        <a href="order.html?product=${product.id}" class="btn btn-primary btn-sm btn-rounded">Ordenar</a>
+                    </div>
+                </div>
+            `;
+            
+            featuredContainer.innerHTML += productHtml;
+        });
+    }
+}
+
+/**
+ * Display all products on the menu page
+ * @param {Object} data - The product data from JSON
+ */
+function displayMenuProducts(data) {
+    const menuContainer = document.querySelector('#menu-grid');
+    if (!menuContainer) return;
+    
+    // Clear container
+    menuContainer.innerHTML = '';
+    
+    // Display all products
+    data.products.forEach(product => {
+        const formattedPrice = product.price.toLocaleString('es-CO', {
+            style: 'currency',
+            currency: product.currency,
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+        
+        const productHtml = `
+            <div class="product-card" data-category="${product.category}">
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                    ${product.bestseller ? '<div class="product-badge">Bestseller</div>' : ''}
+                </div>
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="product-price">
+                        ${formattedPrice}
+                    </div>
+                    <a href="order.html?product=${product.id}" class="btn btn-primary btn-sm btn-rounded">Ordenar</a>
+                </div>
+            </div>
+        `;
+        
+        menuContainer.innerHTML += productHtml;
+    });
+    
+    // Reinitialize menu filters
+    if (typeof initMenuFilters === 'function') {
+        initMenuFilters();
+    }
+}
+
+/**
+ * Setup products for the order page
+ * @param {Object} data - The product data from JSON
+ */
+function setupOrderProducts(data) {
+    const orderItemsContainer = document.querySelector('.order-items');
+    if (!orderItemsContainer) return;
+    
+    // Clear container
+    orderItemsContainer.innerHTML = '';
+    
+    // Display all products
+    data.products.forEach(product => {
+        const formattedPrice = product.price.toLocaleString('es-CO', {
+            style: 'currency',
+            currency: product.currency,
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+        
+        const productHtml = `
+            <div class="order-item" data-category="${product.category}">
+                <div class="item-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="item-details">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="item-price">${formattedPrice}</div>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn minus" data-id="${product.id}">-</button>
+                    <input type="number" value="0" min="0" max="10" data-id="${product.id}" data-price="${product.price}" data-name="${product.name}">
+                    <button class="quantity-btn plus" data-id="${product.id}">+</button>
+                </div>
+            </div>
+        `;
+        
+        orderItemsContainer.innerHTML += productHtml;
+    });
+    
+    // Reinitialize order functionality
+    if (typeof initQuantityHandlers === 'function') {
+        initQuantityHandlers();
+    }
+    
+    if (typeof initCategoryFilters === 'function') {
+        initCategoryFilters();
+    }
+    
+    // Check for URL parameters
+    if (typeof checkURLParameters === 'function') {
+        checkURLParameters();
+    }
+}
 
 /**
  * Initialize mobile menu toggle functionality
@@ -253,9 +471,9 @@ function showNotification(message, type = 'success') {
     notification.style.backgroundColor = type === 'success' ? '#4CAF50' : '#F44336';
     notification.style.color = 'white';
     notification.style.padding = '10px 20px';
-    notification.style.borderRadius = '4px';
+    notification.style.borderRadius = '10px';
     notification.style.marginBottom = '10px';
-    notification.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+    notification.style.boxShadow = '0 3px 6px rgba(0,0,0,0.2)';
     notification.style.minWidth = '200px';
     notification.style.opacity = '0';
     notification.style.transition = 'opacity 0.3s ease';

@@ -1,0 +1,163 @@
+{
+    "categories": [
+      {
+        "id": "cafe",
+        "name": "Cafés",
+        "description": "Descubre nuestros cafés exclusivos destilados y preparados por nuestros reconocidos baristas."
+      },
+      {
+        "id": "pasteles",
+        "name": "Pasteles",
+        "description": "Deliciosos pasteles artesanales elaborados diariamente con ingredientes de la más alta calidad."
+      },
+      {
+        "id": "panes",
+        "name": "Panes",
+        "description": "Panes artesanales horneados cada día con masa madre y técnicas tradicionales."
+      },
+      {
+        "id": "croissants",
+        "name": "Croissants",
+        "description": "Descubre nuestra receta de Croissant que te sorprenderá, ¡Croissants clásicos o rellenos!"
+      },
+      {
+        "id": "desayunos",
+        "name": "Desayunos",
+        "description": "Comienza tu día con nuestros deliciosos desayunos preparados con ingredientes frescos."
+      }
+    ],
+    "products": [
+      {
+        "id": "cappuccino",
+        "name": "Cappuccino",
+        "category": "cafe",
+        "price": 4.50,
+        "currency": "COP",
+        "description": "Espresso, leche vaporizada, espuma y un toque de canela.",
+        "image": "assets/images/products/coffee1.jpg",
+        "bestseller": true,
+        "tags": ["caliente", "con leche"]
+      },
+      {
+        "id": "cafe-con-leche",
+        "name": "Café con leche",
+        "category": "cafe",
+        "price": 5.00,
+        "currency": "COP",
+        "description": "El clásico, amado por todos, con un toque de vainilla natural.",
+        "image": "assets/images/products/coffee2.jpg",
+        "bestseller": false,
+        "tags": ["caliente", "con leche"]
+      },
+      {
+        "id": "cafe-negro",
+        "name": "Café negro",
+        "category": "cafe",
+        "price": 4.00,
+        "currency": "COP",
+        "description": "Granos seleccionados elaborados con la mixtura de preparación perfecta.",
+        "image": "assets/images/products/coffee3.jpg",
+        "bestseller": false,
+        "tags": ["caliente", "sin leche"]
+      },
+      {
+        "id": "croissant-chocolate",
+        "name": "Croissant de Chocolate",
+        "category": "croissants",
+        "price": 3.50,
+        "currency": "COP",
+        "description": "Delicioso croissant con líneas de chocolate belga, horneado a la perfección.",
+        "image": "assets/images/products/pastry1.jpg",
+        "bestseller": true,
+        "tags": ["dulce", "chocolate"]
+      },
+      {
+        "id": "alfajor-dulce",
+        "name": "Alfajor de Dulce",
+        "category": "pasteles",
+        "price": 2.75,
+        "currency": "COP",
+        "description": "Delicadas galletas rellenas de dulce de leche y cubiertas con coco rallado.",
+        "image": "assets/images/products/pastry2.jpg",
+        "bestseller": false,
+        "tags": ["dulce", "tradicional"]
+      },
+      {
+        "id": "muffin-frutas",
+        "name": "Muffin de Frutas",
+        "category": "pasteles",
+        "price": 3.25,
+        "currency": "COP",
+        "description": "Esponjoso muffin con trozos de frutas frescas de temporada.",
+        "image": "assets/images/products/pastry3.jpg",
+        "bestseller": false,
+        "tags": ["dulce", "frutas"]
+      },
+      {
+        "id": "croissant-clasico",
+        "name": "Croissant Clásico",
+        "category": "croissants",
+        "price": 2.95,
+        "currency": "COP",
+        "description": "Crujiente por fuera, suave por dentro, con mantequilla francesa de la mejor calidad.",
+        "image": "assets/images/products/pastry4.jpg",
+        "bestseller": true,
+        "tags": ["clásico", "mantequilla"]
+      },
+      {
+        "id": "pan-artesanal",
+        "name": "Pan Artesanal",
+        "category": "panes",
+        "price": 4.50,
+        "currency": "COP",
+        "description": "Elaborado con fermentación natural y horneado en horno de piedra tradicional.",
+        "image": "assets/images/products/bread1.jpg",
+        "bestseller": false,
+        "tags": ["artesanal", "masa madre"]
+      },
+      {
+        "id": "baguette-francesa",
+        "name": "Baguette Francesa",
+        "category": "panes",
+        "price": 3.75,
+        "currency": "COP",
+        "description": "Corteza crujiente, miga suave y alveolada, elaborada con técnica tradicional.",
+        "image": "assets/images/products/bread2.jpg",
+        "bestseller": false,
+        "tags": ["tradicional", "crujiente"]
+      },
+      {
+        "id": "espresso",
+        "name": "Espresso",
+        "category": "cafe",
+        "price": 2.50,
+        "currency": "COP",
+        "description": "Café concentrado con crema dorada, intenso y aromático.",
+        "image": "assets/images/products/coffee1.jpg",
+        "bestseller": false,
+        "tags": ["caliente", "intenso"]
+      },
+      {
+        "id": "desayuno-completo",
+        "name": "Desayuno Completo",
+        "category": "desayunos",
+        "price": 8.95,
+        "currency": "COP",
+        "description": "Huevos revueltos, tostadas de pan artesanal, fruta fresca y café o jugo natural.",
+        "image": "assets/images/products/breakfast1.jpg",
+        "bestseller": true,
+        "tags": ["completo", "tradicional"]
+      },
+      {
+        "id": "bowl-yogurt",
+        "name": "Bowl de Yogurt",
+        "category": "desayunos",
+        "price": 6.50,
+        "currency": "COP",
+        "description": "Yogurt natural con granola casera, miel orgánica y frutas frescas de temporada.",
+        "image": "assets/images/products/breakfast2.jpg",
+        "bestseller": false,
+        "tags": ["saludable", "ligero"]
+      }
+    ]
+  }

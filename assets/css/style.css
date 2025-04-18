@@ -994,7 +994,7 @@ button, input, select, textarea {
 .contact-hero {
     padding: 160px 0 80px;
     background-color: var(--background-alt);
-    background-image: url('../images/contact-bg.jpg');
+    background-image: url('../images/about-cafe.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
